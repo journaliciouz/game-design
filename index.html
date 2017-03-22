@@ -130,7 +130,6 @@ But don&#39;t take my word for it, hear it from himself!
 
 //&quot;Great stories are not made individually...
 (click-replace:&quot;Great stories are not made individually...&quot;)[Great stories are not made individually, but are products of cooperation. This was our first lesson in journalism school, and I have practiced it ever since. I have coached storytellers when they were stuck in a forest of interviews when I was the editor of the Podcast Omlüd at my university, and I have planned and produced feature stories, magazines and a daily flow of news information at my internships at the Reuters news agency and the bi-monthly Danish Medical Journal. My biggest strengths are within telling, planning and producing stories both with words, audio and video.&quot;]//
-
 (if:(history:) contains &quot;Who is this guy?&quot;)[[[Okay I didn&#39;t pay attention.. Why should we let him in again?|Why should we let him in?]]](else:)[[[But why should we let him in?|Why should we let him in?]]]
 (if:(history:) contains &quot;Why does he want to study game design?&quot;)[[[Ehm.. I forgot.. Why does he want to be a game designer?|Why does he want to study game design?]]](else:)[[[Why does he want to study game design?|Why does he want to study game design?]]]
 [[This is boring.. Got any games?|Do you have any games?]](set: $application to it +(dataset:&quot;Who&quot;))</tw-passagedata>
@@ -142,7 +141,9 @@ He&#39;s also a sweet and well travelled guy! He&#39;s been living in Berlin and
 
 I bet he would make friends with the international students at ITU quite easily!
 
-He&#39;s also been producing stories professionally for two years! He was the editor at his university&#39;s podcast where he coached his fellow students and helped them tell their great stories! And in his internship at the Reuters news agency and the Danish Medical Journal he practiced leading the production of both daily news and magazines overseeing multiple journalists!
+He&#39;s also been producing stories professionally for two years! He was the editor at his university&#39;s podcast where he coached his fellow students and helped them tell their great stories! And in his internship at the Reuters news agency and the Danish Medical Journal he practiced leading the production of both daily news, podcasts and magazines - overseeing multiple journalists!
+
+From innovation and idea development to publishing, Alexander has tried it all!
 
 (if:(history:) contains &quot;Who is this guy?&quot;)[[[Wait, tell me again.. Who is this guy?|Who is this guy?]]](else:)[[[Cool, but who is this guy?|Who is this guy?]]]
 (if:(history:) contains &quot;Why does he want to study game design?&quot;)[[[Tell my again, why does he want to be a game designer?|Why does he want to study game design?]]](else:)[[[Why does he want to study game design?|Why does he want to study game design?]]]
@@ -160,13 +161,13 @@ Here we go! We can play:
 Just [[Stop|Picker]] the wheel at your preferred game!</tw-passagedata>
 <tw-passagedata pid="13" name="Footer" tags="footer" position="716,298">
 
-(color:green)[(link-goto: &quot;Reboot application&quot;, &quot;Welcome!&quot;)]
+(color:green)[(text-style:&quot;blink&quot;)[&gt;](link-goto: &quot;Reboot application&quot;, &quot;Welcome!&quot;)]
 (if: $application contains &quot;Who&quot; and contains &quot;Why&quot; and contains &quot;Whyy&quot;)[(set: $read to 1)]
 (if: $gamer is 1 or $shut_up is 1 or $read is 1 or $h4x is 1)[*Achievements:*
-(if: $read is 1)[(color:blue)[Knower of Alexanders]](else:)[(color:grey)[???]]
-(if: $gamer is 1)[(color:blue)[Played a game!]](else:)[(color:grey)[???]]
 (if: $shut_up is 1)[(color:blue)[A brief history of computing]](else:)[(color:grey)[???]]
+(if: $read is 1)[(color:blue)[Knower of Alexanders]](else:)[(color:grey)[???]]
 (if: $h4x is 1)[(color:green)[h4xx0r t3h m4tr1x]](else:)[(color:grey)[???]]
+(if: $gamer is 1)[(color:blue)[Played a game!]](else:)[(color:grey)[???]]
 ]</tw-passagedata>
 <tw-passagedata pid="14" name="Picker" tags="" position="420,964">Yay! My favourite! 
 
