@@ -120,8 +120,8 @@ Humans are all the same..
 <tw-passagedata pid="8" name="HACK" tags="" position="962,900">=&gt;&lt;= 
 #D:
 (text-style:&quot;rumble&quot;)[(color:green)[44aAargh! My m41nfr4m3z!]]
-(set: $h4x to 1)
-&lt;=</tw-passagedata>
+&lt;=
+(set: $h4x to 1) </tw-passagedata>
 <tw-passagedata pid="9" name="Who is this guy?" tags="" position="162,685">Alexander is a 24 year old strapping lad with a heart for telling stories and an appetite for comics, movies, games and books like few others!
 
 He&#39;s graduating his journalism studies this summer, and wants to use what he&#39;s learned about producing and developing creative stories for video games! And he believes a MSc in Games Design can help him achieve his dream of becoming a Narrative Designer!
@@ -133,9 +133,7 @@ But don&#39;t take my word for it, hear it from himself!
 
 (if:(history:) contains &quot;Who is this guy?&quot;)[[[Okay I didn&#39;t pay attention.. Why should we let him in again?|Why should we let him in?]]](else:)[[[But why should we let him in?|Why should we let him in?]]]
 (if:(history:) contains &quot;Why does he want to study game design?&quot;)[[[Ehm.. I forgot.. Why does he want to be a game designer?|Why does he want to study game design?]]](else:)[[[Why does he want to study game design?|Why does he want to study game design?]]]
-[[This is boring.. Got any games?|Do you have any games?]]
-
-(set: $application to it +(dataset:&quot;Who&quot;))</tw-passagedata>
+[[This is boring.. Got any games?|Do you have any games?]](set: $application to it +(dataset:&quot;Who&quot;))</tw-passagedata>
 <tw-passagedata pid="10" name="Why should we let him in?" tags="" position="245,826">Well first of all, he coded (text-style:&quot;rumble&quot;)[ME!]in Twine and HTML! And he made me all pretty with CSS!
 
 Rumour has it he even loaded me up with some games he coded himself, and his fellow journalism students loved the Python scripts he wrote to automate school tasks.
@@ -145,8 +143,8 @@ He&#39;s also a sweet and well travelled guy! He&#39;s been living in Berlin and
 I bet he would make friends with the international students at ITU quite easily!
 
 He&#39;s also been producing stories professionally for two years! He was the editor at his university&#39;s podcast where he coached his fellow students and helped them tell their great stories! And in his internship at the Reuters news agency and the Danish Medical Journal he practiced leading the production of both daily news and magazines overseeing multiple journalists!
-(if:(history:) contains &quot;Who is this guy?&quot;)[[[Wait, tell me again.. Who is this guy?|Who is this guy?]]]
-(else:)[[[Cool, but who is this guy?|Who is this guy?]]]
+
+(if:(history:) contains &quot;Who is this guy?&quot;)[[[Wait, tell me again.. Who is this guy?|Who is this guy?]]](else:)[[[Cool, but who is this guy?|Who is this guy?]]]
 (if:(history:) contains &quot;Why does he want to study game design?&quot;)[[[Tell my again, why does he want to be a game designer?|Why does he want to study game design?]]](else:)[[[Why does he want to study game design?|Why does he want to study game design?]]]
 [[This is boring.. Got any games?|Do you have any games?]](if: (history:) contains &quot;Who is this guy?&quot; and (history:) contains &quot;Why does he want to study game design?&quot;)[(set:$end to 1)](set: $application to it + (dataset:&quot;Why&quot;))</tw-passagedata>
 <tw-passagedata pid="11" name="Do you have any games?" tags="" position="500,703">Wait.. What? No.. I&#39;m a professional work-tool! I would never..
@@ -206,12 +204,9 @@ He believes games are the best way to move and inspire people, and this is why h
 
 He believes he can achieve this, and create an //actual// Westworld(to free us all) with a master in Game Design from ITU!
 
-(if:(history:) contains &quot;Who is this guy?&quot;)[[[Wait, tell me again.. Who is this guy?|Who is this guy?]]]
-(else:)[[[Cool, but who is this guy?|Who is this guy?]]](if:(history:) contains &quot;Why should we let him in?&quot;)[[[And why was it we should let him into ITU|Why should we let him in?]]](else:)[[[Why should we let him in?|Why should we let him in?]]]
-[[This is boring.. Got any games?|Do you have any games?]]
-(if: (history:) contains &quot;Why should we let him in?&quot; and (history:) contains &quot;Who is this guy?&quot;)[(set:$end to 1)]
-
-(set: $application to it + (dataset:&quot;Whyy&quot;))</tw-passagedata>
+(if:(history:) contains &quot;Who is this guy?&quot;)[[[Wait, tell me again.. Who is this guy?|Who is this guy?]]](else:)[[[Cool, but who is this guy?|Who is this guy?]]]
+(if:(history:) contains &quot;Why should we let him in?&quot;)[[[And why was it we should let him into ITU|Why should we let him in?]]](else:)[[[Why should we let him in?|Why should we let him in?]]]
+[[This is boring.. Got any games?|Do you have any games?]](if: (history:) contains &quot;Why should we let him in?&quot; and (history:) contains &quot;Who is this guy?&quot;)[(set:$end to 1)](set: $application to it + (dataset:&quot;Whyy&quot;))</tw-passagedata>
 <tw-passagedata pid="17" name="Title" tags="" position="507,169">&lt;img align=&quot;center&quot; src=&quot;images/beemo.png&quot;&gt;
 
 [[Continue|Welcome!]]</tw-passagedata>
